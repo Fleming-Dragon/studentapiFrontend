@@ -18,6 +18,7 @@ useEffect(()=>{
     })
 })
 
+
   return (
     <div className="page-container">
       <div className="page-header">
@@ -38,7 +39,7 @@ useEffect(()=>{
               <p><strong>Age:</strong> {student.age}</p>
               <p><strong>Department:</strong> {student.department}</p>
               <div className="card-actions">
-                <button className="btn-edit">Edit</button>
+                <button className="btn-edit" onClick={handleClickEdit}>Edit</button>
                 <button className="btn-delete">Delete</button>
               </div>
             </div>

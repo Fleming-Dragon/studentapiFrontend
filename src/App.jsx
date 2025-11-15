@@ -2,9 +2,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import StudentList from './pages/StudentList';
-// import AddStudent from './pages/AddStudent';
+import AddStudent from './pages/AddStudent';
 import EditStudent from './pages/EditStudent';
-// import DeleteStudent from './pages/DeleteStudent';
+import DeleteStudent from './pages/DeleteStudent';
 import './App.css';
 
 
@@ -20,9 +20,9 @@ function App() {
             <h1 className="nav-logo">Student Management</h1>
             <ul className="nav-menu">
               <li><Link to="/">All Students</Link></li>
-              {/* <li><Link to="/add">Add Student</Link></li> */}
+              <li><Link to="/add">Add Student</Link></li>
               <li><Link to="/edit">Edit Student</Link></li>
-              {/* <li><Link to="/delete">Delete Student</Link></li> */}
+              <li><Link to="/delete">Delete Student</Link></li>
             </ul>
           </div>
         </nav>
@@ -30,9 +30,9 @@ function App() {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<StudentList />} />
-            {/* <Route path="/add" element={<AddStudent />} /> */}
-            <Route path="/edit" element={<EditStudent />} />
-            {/* <Route path="/delete" element={<DeleteStudent />} /> */}
+            <Route path="/add" element={<AddStudent />} />
+            <Route path="/edit/:id" element={<EditStudent />} />
+            <Route path="/delete/:id" element={<DeleteStudent />} />
           </Routes>
         </main>
       </div>
